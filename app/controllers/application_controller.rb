@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
   
   def current_user 
     if !logged_in? 
-      redirect_to root_path 
+      return session[:name]
+    else 
+      return nil 
     end 
   end 
   
