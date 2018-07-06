@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
     if !logged_in? 
       return session[:name]
     else 
-      return nil 
+      return nil
+      redirect_to "sessions/new"
     end 
   end 
   
