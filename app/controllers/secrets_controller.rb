@@ -1,5 +1,5 @@
 class SecretsController < ApplicationController
-  before_ filter :authentication_required 
+  before_action :authentication_required 
 
   
   def show
