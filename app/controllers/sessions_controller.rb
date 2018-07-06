@@ -4,13 +4,9 @@ class SessionsController < ApplicationController
   end 
   
   def create 
-    @user = User.new 
-    @user.name = User.name
-    if @user.save 
-      redirect_to "secrets/show"
-    else 
-      render :new 
-    end 
+    @user = User.find_by(:name, params[:name])
+    session[:id] = user.name 
+    redirect_to "secrets/show"
   end 
 
   
