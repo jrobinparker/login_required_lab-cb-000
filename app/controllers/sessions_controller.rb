@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   
   def create 
     @user = User.new 
-    @user.name = params([:name])
+    @user.name = User.name
     if @user.save 
       redirect_to "secrets/show"
     else 
