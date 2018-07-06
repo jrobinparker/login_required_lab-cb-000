@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   
   def create 
     @user = User.find_by(name: params[:name])
-    session[:user_id] = @user.name 
+    session[:name] = @user.name 
     redirect_to "secrets/show"
   end 
 
