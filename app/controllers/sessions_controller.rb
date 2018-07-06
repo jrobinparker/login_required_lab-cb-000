@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   
   def create 
     user = User.find_by(params[:name])
-    session[:user_id] = user.id
+    session[:name] = user.id
     re
   end 
   
