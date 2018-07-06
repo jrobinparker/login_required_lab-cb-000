@@ -12,8 +12,6 @@ class SessionsController < ApplicationController
       render :new 
     end 
   end 
-  
-      user = User.find_by(name: params[:name])
-    session[:name] = user.name
+
   
 end
